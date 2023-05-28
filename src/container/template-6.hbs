@@ -1,0 +1,78 @@
+<header class="header">
+
+	<div class="">
+		{{> logo}}
+	</div>
+
+	<nav class="header_nav">
+		<div class="header_nav_right">
+			{{> nav list=header}}
+		</div>
+	</nav>
+</header>
+
+<main class="main">
+	{{#with info}}
+	<div class="info_content">
+		<h1 class="info_title">{{title}}</h1>
+		<div>
+			<p class="info_description">{{description}}</p>
+		</div>
+	</div>
+	{{/with}}
+
+	{{> formInput data=form}}
+</main>
+
+<section>
+	{{#with updates}}
+	<div class="updates">
+		<h1 class="updates_title">{{title}}</h1>
+		{{#each list}}
+		<div class="updates_list">
+			<div class="upd_image"
+				style="background: rgb(193,135,255);
+background: linear-gradient(28deg, rgba(193,135,255,1) 10%, rgba(215,187,255,1) 42%, rgba(255,217,64,1) 72%, rgba(255,201,87,1) 90%);">
+			</div>
+			<div class="upd_info">
+				<span class="upd_nickname">{{nickname}}</span>
+				<p class="upd_description">{{description}}</p>
+			</div>
+		</div>
+		{{/each}}
+		{{#with show_all}}
+		<a class="upd_link" href="{{url}}">{{text}}</a>
+		{{/with}}
+	</div>
+	{{/with}}
+</section>
+
+<section class="expirience">
+	{{#with expirience}}
+	<h1 class="expirience_title">{{title}}</h1>
+	<div class="expirience_content">
+
+		<div class="expirience_badge">{{badge}}</div>
+		{{#each list}}
+		<div class="expirience_list">
+			<span class="expirience_name">{{name}}</span>
+			<p class="expirience_details">{{details}}</p>
+		</div>
+		{{/each}}
+	</div>
+	{{/with}}
+</section>
+
+<footer class="footer">
+	<div>
+		{{> logo}}
+		<span class="footer_copyright">Copyright 2023-2024</span>
+	</div>
+
+	{{#each footer}}
+	<div>
+		<span class="footer_title">{{title}}</span>
+		{{> nav list=links isVertical=true}}
+	</div>
+	{{/each}}
+</footer>
