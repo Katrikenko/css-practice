@@ -1,0 +1,11 @@
+<div class="article_card">
+	{{#if isNew}}
+	<img src="{{photo}}" id="{{id}}" class="article_img" alt="photo">
+	<div class="new_badge">New</div>
+	{{else}}
+	<img src="{{photo}}" id="{{id}}" class="article_img" alt="photo">
+	{{/if}}
+	<h3 class="article_name">{{name}}</h3>
+	<p class="artc_description">{{description}}</p>
+	<button class="article_button">Read all</button>
+</div>
