@@ -30,7 +30,7 @@ html {
 }
 
 .page_content {
-  width: var(--page-width);
+  /* max-width: var(--page-width); */
   width: 100%;
   display: flex;
   flex-direction: column;
